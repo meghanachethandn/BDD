@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.924" tests="13" skipped="0" failures="0" errors="0">
+<testcase classname="User Login" name="Login with valid Credentials - Example #1.1" time="0.065">
+<system-out><![CDATA[
+Given User Navigate to login page...........................................passed
+When User enter valid username Admin........................................passed
+And User enter valid password Admin@123.....................................passed
+And Click on login button...................................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with valid Credentials - Example #1.2" time="0.021">
+<system-out><![CDATA[
+Given User Navigate to login page...........................................passed
+When User enter valid username Admin123.....................................passed
+And User enter valid password Admin@1.......................................passed
+And Click on login button...................................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with valid Credentials - Example #1.3" time="0.007">
+<system-out><![CDATA[
+Given User Navigate to login page...........................................passed
+When User enter valid username user.........................................passed
+And User enter valid password User@123......................................passed
+And Click on login button...................................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with invalid Credentials" time="0.007">
+<system-out><![CDATA[
+Given User Navigate to login page...........................................passed
+When User enter invalid username "Admin1"...................................passed
+And User enter invalid password "Admin1234".................................passed
+And Click on login button...................................................passed
+Then User should get proper warning message.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with valid username and invalid password" time="0.009">
+<system-out><![CDATA[
+Given User Navigate to login page...........................................passed
+When User enter valid username "Admin"......................................passed
+And User enter invalid password "Admin@123".................................passed
+And Click on login button...................................................passed
+Then User should get proper warning message.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with invalid username and valid password" time="0.004">
+<system-out><![CDATA[
+Given User Navigate to login page...........................................passed
+When User enter invalid username "Admin1"...................................passed
+And User enter valid password "Admin@123"...................................passed
+And Click on login button...................................................passed
+Then User should get proper warning message.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with out providing any credentials" time="0.005">
+<system-out><![CDATA[
+Given User Navigate to login page...........................................passed
+When User dont enter any credentials........................................passed
+And Click on login button...................................................passed
+Then User should get proper warning message.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registeration" name="Register with mandatory field" time="0.019">
+<system-out><![CDATA[
+Given User navigate to register account page................................passed
+When User enter below details in to the fields..............................passed
+And Select privacy police field.............................................passed
+And Click on continue button................................................passed
+Then Account should get successfully created................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registeration" name="Register with all field" time="0.008">
+<system-out><![CDATA[
+Given User navigate to register account page................................passed
+When User enter firstname "Meghana" in to firstname field...................passed
+And User enter lastname "D N" in to lastname field..........................passed
+And User enter e-mail "meghananateshdn@gmail.com" in to email field.........passed
+And User enter mobile number "123456789" in to telephone field..............passed
+And User enter password "Admin@123" in to password field....................passed
+And User enter confirm password "Admin@123" in to confirm password field....passed
+And Select Yes for newsletter...............................................passed
+And Select privacy police field.............................................passed
+And Click on continue button................................................passed
+Then Account should get successfully created................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registeration" name="Register without providing any field" time="0.004">
+<system-out><![CDATA[
+Given User navigate to register account page................................passed
+When User do not enter details in to any field..............................passed
+And Click on continue button................................................passed
+Then warning message should dispaly for all madatory fields.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search functionality" name="Search for valid product" time="0.015">
+<system-out><![CDATA[
+Given User open search button...............................................passed
+When User enter valid product in to search field............................passed
+And User click on search button.............................................passed
+Then Valid product should get displayed in seach result.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search functionality" name="Search for non-existing product" time="0.003">
+<system-out><![CDATA[
+Given User open search button...............................................passed
+When User enter non-existing product in to search field.....................passed
+And User click on search button.............................................passed
+Then proper text informing the user about no product matching should be displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Search functionality" name="Search without providing any product" time="0.004">
+<system-out><![CDATA[
+Given User open search button...............................................passed
+When User do not enter product in to search field...........................passed
+And User click on search button.............................................passed
+Then proper text informing the user about no product matching should be displayed.passed
+]]></system-out>
+</testcase>
+</testsuite>
